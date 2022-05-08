@@ -1,2 +1,0 @@
-FROM openjdk:8
-CMD [ "java","-jar","profounditllcbackend-1.0.0.jar" ]
