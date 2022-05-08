@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class EmailController {
 
-    @GetMapping("/checkSanity")
+    @GetMapping("/checksanity")
     public ResponseEntity<ServerResponse> checkSanity() {
         return new ResponseEntity<>(new ServerResponse("Things look fine", "Object content"), HttpStatus.OK);
     }

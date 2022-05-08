@@ -9,6 +9,6 @@ import lombok.Setter;
 @Getter
 @AllArgsConstructor
 public class ServerResponse {
-    String message;
-    Object data;
+	private String message;
+    private Object data;
 }
