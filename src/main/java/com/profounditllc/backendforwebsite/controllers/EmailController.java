@@ -19,6 +19,10 @@ public class EmailController {
 		this.emailService = emailService;
 	}
 	
+//	send attachments - read
+//	https://howtodoinjava.com/spring-boot2/send-email-with-attachment/
+		
+	
     @GetMapping("/checksanity")
     public ResponseEntity<ServerResponse> checkSanity() {
     	this.emailService.sendSimpleMessage("ashish.25jl@gmail.com", "Test Spring Boot Mailer", "Hello from Profound IT LLC Careers.");
