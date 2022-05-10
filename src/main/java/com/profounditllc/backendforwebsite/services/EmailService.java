@@ -11,8 +11,16 @@ public class EmailService {
 	@Autowired
 	private JavaMailSender emailSender;
 
-	public void sendSimpleMessage(String to, String subject, String text) {
+	public void sendSimpleMail(String to, String subject, String messageText) {
+		SimpleMailMessage message = new SimpleMailMessage();
+		message.setFrom("careers@profounditllc.com");
+		message.setTo(to);
+		message.setSubject(subject);
+		message.setText(messageText);
+		emailSender.send(message);
+	}
 
+	public void sendMailWithAttachment(String to, String subject, String text) {
 		SimpleMailMessage message = new SimpleMailMessage();
 		message.setFrom("careers@profounditllc.com");
 		message.setTo(to);
