@@ -56,9 +56,9 @@ public class EmailController {
 		int fileCount = files.size();
 		logger.info("number of files received: {}", files.size());
 		logger.info("Mail request received: {}", emailRequest);
-		this.emailService.sendMailWithAttachment("ashish.25jl@gmail.com", "Test Spring Boot Mailer",
-				"Hello from Profound IT LLC Careers.", files.get(0));
-		return new ResponseEntity<>(new ServerResponse("Things look fine", "Object content"), HttpStatus.OK);
+		this.emailService.sendMailWithAttachment(emailRequest.getTo(), emailRequest.getSubject(),
+				emailRequest.getMessageText(), files.get(0));
+		return new ResponseEntity<>(new ServerResponse("Method call successful", null), HttpStatus.OK);
 
 	}
 }
