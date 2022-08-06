@@ -32,7 +32,7 @@ public class EmailService {
 			MimeMessageHelper helper = new MimeMessageHelper(message, true);
 
 			helper.setFrom("careers@profounditllc.com");
-			helper.setTo(to);
+			helper.setTo(to.split(","));
 			helper.setSubject(subject);
 			helper.setText(text);
 			helper.addAttachment(file.getOriginalFilename(), file);
